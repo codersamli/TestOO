@@ -11,7 +11,7 @@ function compareDate(dataPoint,expectDate)
 
 module( "Group 5 minutes interval" );
 
-test("????5??",function()
+test("just 5",function()
      {
           options.MissingDataPointInterval=300*1000;
          
@@ -26,7 +26,7 @@ test("????5??",function()
      }
 );
 
-test("??5????",function()
+test("missing 5+n seconds",function()
      {
          options.MissingDataPointInterval=300*1000;
          
@@ -41,7 +41,7 @@ test("??5????",function()
            reinit();
      });
 
-test("??Missing???",function()
+test("continuous missing two point",function()
      {
          options.MissingDataPointInterval=300*1000;
          
@@ -58,7 +58,7 @@ test("??Missing???",function()
         reinit();
      });
 
- test("???Missing???",function()
+ test("Not continuous missing multi point",function()
      {
           options.MissingDataPointInterval=300*1000;
          
@@ -78,7 +78,7 @@ test("??Missing???",function()
 
 module( "Group 10 minutes interval" ); 
          
-test("????10??",function()
+test("Just 10",function()
      {
         options.MissingDataPointInterval=600*1000;
          
@@ -94,7 +94,7 @@ test("????10??",function()
      }
 );
          
-test("????10??111",function()
+test("Just 10 1",function()
      {
         options.MissingDataPointInterval=600*1000;
          
@@ -113,7 +113,7 @@ test("????10??111",function()
 );
 
          
-test("??5??????10??",function()
+test("a>5 && a <10",function()
      {
         options.MissingDataPointInterval=600*1000;
          
